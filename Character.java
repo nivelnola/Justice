@@ -17,7 +17,7 @@ public class Character {
 
     //Methods
     public boolean isAlive() {
-	if(hp < 0) {
+	if(hp <= 0) {
 	    System.out.println("You are dead.");
 	    return false;
 	}

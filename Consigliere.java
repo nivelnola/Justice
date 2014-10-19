@@ -26,7 +26,7 @@ public class Consigliere extends Character {
     public void search(Character c) {
 	String role = new String();
 	role = c.getClass().getSimpleName();
-	log += "/nName: " + c.name + " | " + "Role: " + role;
+	log += "\nName: " + c.name + " | " + "Role: " + role;
 	System.out.println(log);
     }
     public void check() {

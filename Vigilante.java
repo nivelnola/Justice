@@ -24,18 +24,30 @@ public class Vigilante extends Character {
     }
 
     //Methods
+    public String toString() {
+	String s = new String();
+	s = "Name: " + name;
+	s += "\nHealth: " + hp;
+	s += "\nStrength: " + strength;
+	s += "\nDefense: " + defense;
+	s += "\nAttack Rating: " + attackRating;
+	s += "\nBullets: " + bullets;
+	return s;
+    }
     public void fire(Character c) {
-	bullets--;
-	c.hp = 0;
-	System.out.println("You have fired a bullet at " + c.name);
-	if(c.type.equals("Type")) {
-	    guilt = true;
-	    System.out.println("You have killed a fellow Town member!\nYou are overcome by a deadly sense of guilt.");
+	if(bullets > 0) {
+	    bullets--;
+	    c.hp = 0;
+	    System.out.println("You have fired a bullet at " + c.name);
+	    if(c.type.equals("Town")) {
+		guilt = true;
+		System.out.println("You have killed a fellow Town member!\nYou are overcome by a deadly sense of guilt.");
+	    }
 	}
     }
     public void suicide() {
-	if(guilt) {
-	    hp=0;
+	if(guilt == true) {
+	    hp = 0;
 	    System.out.println("You cannot live with this guilt anymore. You decide that there is only one solution.");
 	}
 	else {
