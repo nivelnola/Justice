@@ -1,0 +1,24 @@
+Instance Variables
+	 * Type
+	 * Name
+	 * Health
+	 * Attack
+	 * Defense
+	 * Attack percentage 
+
+Playable Characters
+	 * Vigilante   - Town
+	 * Detective   - Town
+	 * Mafioso     - Mafia
+	 * Survivor    - Neutral
+	 * Executioner - Neutral
+
+Non-Playable Characters
+	* Doctor     - Town
+	* Shopkeeper - Town
+	* Godfather  - Mafia
+
+Universal Methods
+	* Attack
+	* isAlive
+	* 
