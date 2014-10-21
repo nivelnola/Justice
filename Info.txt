@@ -15,10 +15,10 @@ Playable Characters
 
 Non-Playable Characters
 	* Doctor     - Town
-	* Shopkeeper - Town
+	* Shopkeeper - Neutral
 	* Godfather  - Mafia
 
 Universal Methods
 	* Attack
 	* isAlive
-	* 
+	* action/chat
