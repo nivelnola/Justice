@@ -6,6 +6,7 @@ public class Character {
     protected int defense;
     protected int attackRating;
     protected String type;
+    protected boolean immune;
 
     //Constructors
     public Character() {
