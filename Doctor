@@ -12,7 +12,7 @@ public class Doctor extends Character {
         attackRating = 0;
         xp = 0;
     }
-    public Vigilante( String n ) {
+    public Doctor( String n ) {
         super(n);
         type = "Town";
         hp = 100;
