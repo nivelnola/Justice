@@ -46,4 +46,24 @@ public class Character {
 	c.hp -= damage;
 	return damage;
     }
+    public void putVest(Character c) {
+	if(c.vests > 0) {
+	    c.vests--;
+	    c.immune = true;
+	}
+	else {
+	    System.out.println("You do not have any bulletproof vests to put on!");
+	}
+    }
+    public void fire(Character c) {
+	if(bullets > 0) {
+	    bullets--;
+	    c.hp = 0;
+	    System.out.println("You have fired a bullet at " + c.name);
+	    if(c.type.equals("Town")) {
+		guilt = true;
+		System.out.println("You have killed a fellow Town member!\nYou are overcome by a deadly sense of guilt.");
+	    }
+	}
+    }
 }
