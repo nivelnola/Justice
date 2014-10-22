@@ -1,3 +1,4 @@
+
 //Imports
 import java.util.*;
 
@@ -12,6 +13,9 @@ public class Justice {
 	job = s.nextLine();
 	System.out.println("What is your name?");
 	nam = s.nextLine();
-	System.out.println("Job: " + job + " | Name: " + nam);
+	if(job.equals("Vigilante")) {
+	    Vigilante you = new Vigilante(nam);
+	    System.out.println(you);
+	}
     }
 }
