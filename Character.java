@@ -5,6 +5,8 @@ public class Character {
     protected int strength;
     protected int defense;
     protected int attackRating;
+    protected int bullets;
+    protected int vests;
     protected String type;
     protected boolean immune;
 
