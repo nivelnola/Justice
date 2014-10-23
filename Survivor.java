@@ -21,5 +21,6 @@ public Survivor extends Character {
     String t;
     System.out.println("Who will you side with? Enter: Mafia/Town");
     t = s.nextLine();
+    this.type = t;
   }
 }
