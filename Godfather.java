@@ -23,5 +23,6 @@ public class Godfather extends Character{
 	String s = super.toString();
 	return s;
 	    }
+}
 
  
