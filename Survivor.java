@@ -6,7 +6,6 @@ public Survivor extends Character {
     hp = 50;
     type = "Neutral";
     defense = 2;
-    attackRating = (rand.nextInt(100)+1)/100;
     }
   
   public Survivor( String n ) {
@@ -14,11 +13,13 @@ public Survivor extends Character {
     hp = 50;
     type = "Neutral";
     defense = 2;
-    attackRating = (rand.nextInt(100)+1)/100;
   }
   
   //Methods
-  public void takeSide( //Takes System.in value as a parameter ) {
-    //changes the "type" from Neutral -> the side he/she will be on;
-    //
+  public void takeSide() {
+    Scanner s = new Scanner( System.in );
+    String t;
+    System.out.println("Who will you side with? Enter: Mafia/Town");
+    t = s.nextLine();
   }
+}
