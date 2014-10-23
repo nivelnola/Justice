@@ -24,6 +24,7 @@ public class Executioner extends Character {
 	attackRating = 80;
     }
 
+    //Methods 
     public void setTarget() {
 	String[] targets = {"Vigilante", "Detective", "Mafioso", "Survivor", "Doctor", "Shopkeeper", "Godfather"};
 	Random r = new Random();
@@ -31,7 +32,6 @@ public class Executioner extends Character {
 	target = targets[i];
     }
     
-    //Methods 
     public void attack(Character c) {
 	super.attack(c);
 	if (c.type.equals(target)) {
