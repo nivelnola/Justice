@@ -17,7 +17,15 @@ public class Detective extends Character {
   }
   
   //Methods
-  public void investigate( Character c) {
-  //How to investigate the other character c;
+  public void checkType( Character c) {
+    if (c.type = "Mafia") {
+      System.out.println(c + " is a mafia.");
+    }
+    else if (c.type = "Town") {
+      System.out.println(c + " is a townsperson.");
+    }
+    else {
+      System.out.println( c + " is neutral.");
+    }
   }
 }
