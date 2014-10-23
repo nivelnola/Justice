@@ -38,7 +38,7 @@ public class Executioner extends Character {
 	    System.out.println("You win."); //will change later
 	}
 	else {
-	    System.out.println("You killed a " + c.type + ". Continue on your mission to find and kill a " + target);
+	    System.out.println("You killed a " + c.type + ". Continue on your mission to find and kill a " + target + ".");
 	}
     }
 }
