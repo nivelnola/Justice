@@ -1,6 +1,5 @@
 public class Vigilante extends Character {
     //Instance Variables
-    protected int bullets;
     protected boolean guilt;
 
     //Constructors
@@ -33,6 +32,13 @@ public class Vigilante extends Character {
 	s += "\nAttack Rating: " + attackRating;
 	s += "\nBullets: " + bullets;
 	return s;
+    }
+    public void fire(Character c) {
+	super.fire(c);
+	if(c.type.equals("Town")) {
+	    guilt = true;
+	    System.out.println("You have killed a fellow Town member!\nYou are overcome by a deadly sense of guilt.");
+	}
     }
     public void suicide() {
 	if(guilt == true) {

@@ -60,10 +60,6 @@ public class Character {
 	    bullets--;
 	    c.hp = 0;
 	    System.out.println("You have fired a bullet at " + c.name);
-	    if(c.type.equals("Town")) {
-		guilt = true;
-		System.out.println("You have killed a fellow Town member!\nYou are overcome by a deadly sense of guilt.");
-	    }
 	}
     }
 }

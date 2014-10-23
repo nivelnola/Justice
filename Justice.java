@@ -17,5 +17,9 @@ public class Justice {
 	    Vigilante you = new Vigilante(nam);
 	    System.out.println(you);
 	}
+	//	if(job.equals("Survivor")) {
+	//   Survivor you = new Survivior(nam);
+	//  }
+	System.out.println(you);
     }
 }
