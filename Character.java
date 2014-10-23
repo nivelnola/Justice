@@ -4,7 +4,7 @@ public class Character {
     protected int hp;
     protected int strength;
     protected int defense;
-    protected int attackRating;
+    protected Random attackRating = (rand.nextInt(100)+1)/100;
     protected int bullets;
     protected int vests;
     protected String type;
