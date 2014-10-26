@@ -1,4 +1,3 @@
-
 //Imports
 import java.util.*;
 
@@ -20,6 +19,6 @@ public class Justice {
 	//	if(job.equals("Survivor")) {
 	//   Survivor you = new Survivior(nam);
 	//  }
-	System.out.println(you);
+	//	System.out.println(you);
     }
 }
