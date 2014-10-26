@@ -13,13 +13,22 @@ public class Justice {
 	job = s.nextLine();
 	System.out.println("What is your name?");
 	nam = s.nextLine();
+	
 	if(job.equals("Vigilante")) {
-	    Vigilante you = new Vigilante(nam);
-	    System.out.println(you);
+	    	Vigilante you = new Vigilante(nam);
 	}
-	//	if(job.equals("Survivor")) {
-	//   Survivor you = new Survivior(nam);
-	//  }
+	if(job.equals("Survivor")) {
+	   	Survivor you = new Survivior(nam);
+	}
+	if (job.equals("Executioner")) {
+		Executioner you = new Executioner(nam);
+	}
+	if (job.equals("Mafioso")) {
+		Mafioso you = new Mafioso(nam);
+	}
+	if (job.equals("Detective")) {
+		Detective you = new Detective(nam);
+	}
 	System.out.println(you);
     }
 }
