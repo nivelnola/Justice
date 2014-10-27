@@ -1,6 +1,6 @@
 public class Doctor extends Character {
     //Instance Variables                                                        
-    protected xp;
+    protected int xp;
 
     //Constructors                                                              
     public Doctor() {
@@ -24,7 +24,7 @@ public class Doctor extends Character {
 
     //Methods                
     public String toString() {
-        String s = new String():
+        String s = new String();
         s = "Name: " + name;
         s += "\nHealth: " + hp;
         s += "\nStrength: " + strength;
@@ -36,7 +36,7 @@ public class Doctor extends Character {
     public void heal( Character c ) {
         if (!c.isAlive) {
             c.hp += 1;
-            System.out.println("You revived a dead person: " + c.name):
+            System.out.println("You revived a dead person: " + c.name);
         }
         else {
             if (c.type.equals("Mafia")) {
