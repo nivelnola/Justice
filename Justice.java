@@ -41,9 +41,9 @@ public class Justice {
 	    Detective you = new Detective(0, nam);
 	}
 	else {
-		System.out.println("That is not an acceptable job. We are assuming you are a Survivor.");
-		Survivor you = new Survivor(0, nam);
-	    }
+	    System.out.println("That is not an acceptable job. We are assuming you are a Survivor.");
+	    Survivor you = new Survivor(0, nam);
+	}
 	generate();
     }
 }
