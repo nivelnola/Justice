@@ -2,17 +2,17 @@ public class Survivor extends Character {
   
   //Construtors
   public Survivor() {
-    name = "Robinson Cruso";
+    name = "Robinson Crusoe";
     hp = 50;
     type = "Neutral";
-    defense = 2;
+    defense = 9;
     }
   
   public Survivor( String n ) {
     name = n;
     hp = 50;
     type = "Neutral";
-    defense = 2;
+    defense = 9;
   }
   
   //Methods

@@ -16,9 +16,6 @@ public class Justice {
 	if(job.equals("Vigilante")) {
 	    	Vigilante you = new Vigilante(nam);
 	}
-	if(job.equals("Survivor")) {
-	   	Survivor you = new Survivior(nam);
-	}
 	if (job.equals("Executioner")) {
 		Executioner you = new Executioner(nam);
 	}
@@ -28,13 +25,10 @@ public class Justice {
 	if (job.equals("Detective")) {
 		Detective you = new Detective(nam);
 	}
-<<<<<<< HEAD
-	//	if(job.equals("Survivor")) {
-	//   Survivor you = new Survivior(nam);
-	//  }
-	//	System.out.println(you);
-=======
+	else () {
+		System.out.println("That is not an acceptable job. We are assuming you are a Survivor.");
+		Survivor you = new Survivor(nam);
+	    }
 	System.out.println(you);
->>>>>>> origin/master
     }
 }
