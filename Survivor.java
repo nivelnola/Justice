@@ -1,4 +1,4 @@
-public Survivor extends Character {
+public class Survivor extends Character {
   
   //Construtors
   public Survivor() {
