@@ -3,3 +3,4 @@ Since we're the only ones here right now
 Let's divide up the work, so that there aren't any overlaps and therefore errors when syncing.
 
    - Alon
+   Ok. 
