@@ -41,7 +41,7 @@ public class Character {
 	return s;
     }
 
-    public int attack(Character c) {
+    public void attack(Character c) {
 	int damage;
 	Random r = new Random();
 	attackRating = r.nextInt(100) + 1;
@@ -50,7 +50,6 @@ public class Character {
 	    damage = 0;
 	}
 	c.hp -= damage;
-	return damage;
     }
     public void putVest(Character c) {
 	if(c.vests > 0) {
