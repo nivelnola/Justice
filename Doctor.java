@@ -3,7 +3,7 @@ public class Doctor extends Character {
     protected int xp;
 
     //Constructors                                                              
-    public Doctor() {
+    public Doctor(int num) {
         super();
         type = "Town";
         hp = 100;
@@ -11,8 +11,9 @@ public class Doctor extends Character {
         defense = 3;
         attackRating = 0;
         xp = 0;
+	id = num;
     }
-    public Doctor( String n ) {
+    public Doctor(int num, String n ) {
         super(n);
         type = "Town";
         hp = 100;
@@ -20,6 +21,7 @@ public class Doctor extends Character {
         defense= 3;
         attackRating = 0;
         xp = 0;
+	id = num;
     }
 
     //Methods                

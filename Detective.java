@@ -1,27 +1,29 @@
 public class Detective extends Character {
   
   //Constructors
-  public Detective() {
+  public Detective(int num) {
     name = "Sherlock Homes";
     hp = 125;
     strength = 3;
     defense = 2;
     type = "Town";
+    id = num;
   }
-  public Detective( String n ) {
+  public Detective( int num, String n ) {
     name = n;
     hp = 125;
     strength = 3;
     defense = 2;
     type = "Town";
+    id = num;
   }
   
   //Methods
   public void checkType( Character c) {
-    if (c.type = "Mafia") {
+    if (c.type.equals("Mafia")) {
       System.out.println(c + " is a mafia.");
     }
-    else if (c.type = "Town") {
+    else if (c.type.equals("Town")) {
       System.out.println(c + " is a townsperson.");
     }
     else {

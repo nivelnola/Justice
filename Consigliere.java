@@ -3,7 +3,7 @@ public class Consigliere extends Character {
     private String log;
 
     //Constructors
-    public Consigliere() {
+    public Consigliere(int num) {
 	super();
 	hp = 80;
 	strength = 7;
@@ -11,8 +11,9 @@ public class Consigliere extends Character {
 	attackRating = 4;
 	type = "Mafia";
 	log = "LIST OF ROLES";
+	id = num;
     }
-    public Consigliere(String n) {
+    public Consigliere(int num, String n) {
 	super(n);
 	hp = 80;
 	strength = 7;
@@ -20,6 +21,7 @@ public class Consigliere extends Character {
 	attackRating = 4;
 	type = "Mafia";
 	log = "LIST OF ROLES";
+	id = num;
     }
 
     //Methods

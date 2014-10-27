@@ -6,22 +6,24 @@ public class Executioner extends Character {
     String target;
 
     //Constructors
-    public Executioner() {
+    public Executioner(int num) {
 	name = "Frankie";
 	type = "Neutral";
 	hp = 75;
 	defense = 7;
 	bullets = 3;
 	attackRating = 80;
+	id = num;
     }
 
-    public Executioner(String n) {
+    public Executioner(int num, String n) {
 	name = n;
 	type = "Neutral";
 	hp = 75;
 	defense = 7;
 	bullets = 3;
 	attackRating = 80;
+	id = num;
     }
 
     //Methods 

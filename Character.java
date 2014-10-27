@@ -17,11 +17,11 @@ public class Character {
     //Constructors
     public Character(int num) {
 	name = "John Johnson";
-	id = num
+	id = num;
     }
     public Character(int num, String n) {
 	name = n;
-	id = num
+	id = num;
     }
 
     //Methods

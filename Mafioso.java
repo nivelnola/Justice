@@ -1,15 +1,16 @@
-public class Mafioso{
+public class Mafioso extends Character {
   
-  public Mafioso(){
+  public Mafioso(int num){
     type ="Mafia";
     hp = 75;
     strength = 6;
     defense = 4;
     attackRating = 6;
     bullets = 3;
+    id = num;
     }
   
-  public Mafioso(String n){
+  public Mafioso(int num, String n){
     name = n;
     type = "Mafia"
     hp = 75;
@@ -17,6 +18,7 @@ public class Mafioso{
     defense = 4;
     attackRating = 6;
     bullets = 3;
+    id = num;
     }
   
   public String toString(){
@@ -30,7 +32,7 @@ public class Mafioso{
     if (c.type.equals("Mafia")){
       s = "Mafia";
       }
-    else if (c.type.equals("Neutral") { 
+    else if (c.type.equals("Neutral")) { 
       s = "Neutral";
     }
     else{

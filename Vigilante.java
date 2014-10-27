@@ -3,7 +3,7 @@ public class Vigilante extends Character {
     protected boolean guilt;
 
     //Constructors
-    public Vigilante() {
+    public Vigilante(int num) {
 	super();
 	type = "Town";
 	bullets = 3;
@@ -11,8 +11,9 @@ public class Vigilante extends Character {
 	strength = 5;
 	defense = 3;
 	attackRating = 6;
+	id = num;
     }
-    public Vigilante(String n) {
+    public Vigilante(int num, String n) {
 	super(n);
 	type = "Town";
 	bullets = 3;
@@ -20,6 +21,7 @@ public class Vigilante extends Character {
 	strength = 5;
 	defense = 3;
 	attackRating = 6;
+	id = num;
     }
 
     //Methods

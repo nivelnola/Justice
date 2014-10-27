@@ -1,22 +1,24 @@
 public class Shopkeeper extends Character {
 
     //Constructors 
-    public Shopkeeper() {
+    public Shopkeeper(int num) {
 	name = "Oaken";
 	hp = 50;
 	type = "Neutral";
 	defense = 2;
 	vests = 5;
 	bullets = 4;
+	id = num;
     }
     
-    public Shopkeeper(String n) {
+    public Shopkeeper(int num, String n) {
 	name = n;
 	hp = 50;
 	type = "Neutral";
 	defense = 2;
 	vests = 5;
 	bullets = 4;
+	id = num;
     }
 
     //Methods
