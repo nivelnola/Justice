@@ -43,7 +43,7 @@ public class Character {
 
     public void attack(Character c) {
 	int damage;
-	damage = (strength * attackRating) - c.defense;
+	damage = (int) Math.round(strength * attackRating * 0.01) - c.defense;
 	if(damage < 0) {
 	    damage = 0;
 	}
