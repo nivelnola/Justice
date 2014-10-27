@@ -32,9 +32,11 @@ public class Mafioso{
       }
     else if (c.type.equals("Neutral") { 
       s = "Neutral";
+    }
     else{
       s = "Town";
     }
     System.out.println( c.name + "'s type is " + s);
     }
+}
     
