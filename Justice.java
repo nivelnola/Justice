@@ -28,13 +28,6 @@ public class Justice {
 	if (job.equals("Detective")) {
 		Detective you = new Detective(nam);
 	}
-<<<<<<< HEAD
-	//	if(job.equals("Survivor")) {
-	//   Survivor you = new Survivior(nam);
-	//  }
-	//	System.out.println(you);
-=======
 	System.out.println(you);
->>>>>>> origin/master
     }
 }
