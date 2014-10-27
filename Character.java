@@ -1,3 +1,4 @@
+import java.util.*;
 
 public class Character {
     //Instance Variables
@@ -5,8 +6,8 @@ public class Character {
     protected int hp;
     protected int strength;
     protected int defense;
-    protected Random attackRating; // = (rand.nextInt(100)+1)/100);
-    protected Random attackRating = rand.nextInt(100)+1;
+    //protected Random attackRating; // = (rand.nextInt(100)+1)/100);
+    protected int attackRating;
     protected int bullets;
     protected int vests;
     protected String type;
@@ -39,9 +40,12 @@ public class Character {
 	s += "\nAttack Rating: " + attackRating;
 	return s;
     }
+
     public int attack(Character c) {
 	int damage;
-	damage = (strength * attackRatin) - c.defense;
+	Random r = new Random();
+	attackRating = r.nextInt(100) + 1;
+	damage = (strength * attackRating) - c.defense;
 	if(damage < 0) {
 	    damage = 0;
 	}
