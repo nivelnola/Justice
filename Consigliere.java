@@ -4,7 +4,6 @@ public class Consigliere extends Character {
 
     //Constructors
     public Consigliere(int num) {
-	super();
 	hp = 80;
 	strength = 7;
 	defense = 5;
@@ -14,7 +13,6 @@ public class Consigliere extends Character {
 	id = num;
     }
     public Consigliere(int num, String n) {
-	super(n);
 	hp = 80;
 	strength = 7;
 	defense = 5;

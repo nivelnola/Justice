@@ -4,7 +4,6 @@ public class Vigilante extends Character {
 
     //Constructors
     public Vigilante(int num) {
-	super();
 	type = "Town";
 	bullets = 3;
 	hp = 75;
@@ -14,7 +13,6 @@ public class Vigilante extends Character {
 	id = num;
     }
     public Vigilante(int num, String n) {
-	super(n);
 	type = "Town";
 	bullets = 3;
 	hp = 75;

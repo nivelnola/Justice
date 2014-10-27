@@ -1,3 +1,6 @@
+//Imports
+import java.util.*;
+
 public class Survivor extends Character {
   
   //Construtors

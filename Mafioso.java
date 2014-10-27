@@ -12,7 +12,7 @@ public class Mafioso extends Character {
   
   public Mafioso(int num, String n){
     name = n;
-    type = "Mafia"
+    type = "Mafia";
     hp = 75;
     strength = 6;
     defense = 4;
@@ -23,7 +23,7 @@ public class Mafioso extends Character {
   
   public String toString(){
     String s = super.tString();
-    return s
+    return s;
     }
     
   public void checkFaction( Character c){ 
