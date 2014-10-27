@@ -2,6 +2,7 @@ public class Shopkeeper extends Character {
 
     //Constructors 
     public Shopkeeper(int num) {
+	super(num);
 	name = "Oaken";
 	hp = 50;
 	type = "Neutral";
@@ -12,6 +13,7 @@ public class Shopkeeper extends Character {
     }
     
     public Shopkeeper(int num, String n) {
+	super(num, n);
 	name = n;
 	hp = 50;
 	type = "Neutral";

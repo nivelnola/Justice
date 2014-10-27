@@ -2,6 +2,7 @@ public class Detective extends Character {
   
   //Constructors
   public Detective(int num) {
+    super(num);
     name = "Sherlock Homes";
     hp = 125;
     strength = 3;
@@ -10,6 +11,7 @@ public class Detective extends Character {
     id = num;
   }
   public Detective( int num, String n ) {
+    super(num, n);
     name = n;
     hp = 125;
     strength = 3;

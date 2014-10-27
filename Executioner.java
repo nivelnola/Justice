@@ -7,6 +7,7 @@ public class Executioner extends Character {
 
     //Constructors
     public Executioner(int num) {
+	super(num);
 	name = "Frankie";
 	type = "Neutral";
 	hp = 75;
@@ -17,6 +18,7 @@ public class Executioner extends Character {
     }
 
     public Executioner(int num, String n) {
+	super(num, n);
 	name = n;
 	type = "Neutral";
 	hp = 75;

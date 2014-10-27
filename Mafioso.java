@@ -1,6 +1,7 @@
 public class Mafioso extends Character {
   
   public Mafioso(int num){
+    super(num);
     type ="Mafia";
     hp = 75;
     strength = 6;
@@ -11,6 +12,7 @@ public class Mafioso extends Character {
     }
   
   public Mafioso(int num, String n){
+    super(num, n);
     name = n;
     type = "Mafia";
     hp = 75;
@@ -22,7 +24,7 @@ public class Mafioso extends Character {
     }
   
   public String toString(){
-    String s = super.tString();
+    String s = super.toString();
     return s;
     }
     

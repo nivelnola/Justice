@@ -5,6 +5,7 @@ public class Survivor extends Character {
   
   //Construtors
   public Survivor(int num) {
+    super(num);
     name = "Robinson Crusoe";
     hp = 50;
     type = "Neutral";
@@ -13,6 +14,7 @@ public class Survivor extends Character {
     }
   
   public Survivor(int num,  String n ) {
+    super(num, n);
     name = n;
     hp = 50;
     type = "Neutral";
