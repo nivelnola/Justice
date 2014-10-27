@@ -25,13 +25,10 @@ public class Justice {
 	if (job.equals("Detective")) {
 		Detective you = new Detective(nam);
 	}
-<<<<<<< HEAD
 	else () {
 		System.out.println("That is not an acceptable job. We are assuming you are a Survivor.");
 		Survivor you = new Survivor(nam);
 	    }
-=======
->>>>>>> origin/master
 	System.out.println(you);
     }
 }
