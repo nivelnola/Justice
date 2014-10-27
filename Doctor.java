@@ -34,7 +34,7 @@ public class Doctor extends Character {
         return s;
     }
     public void heal( Character c ) {
-        if (!c.isAlive) {
+        if (!c.isAlive()) {
             c.hp += 1;
             System.out.println("You revived a dead person: " + c.name);
         }
