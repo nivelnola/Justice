@@ -5,10 +5,7 @@ public class Character {
     protected int hp;
     protected int strength;
     protected int defense;
-<<<<<<< HEAD
-=======
     protected Random attackRating; // = (rand.nextInt(100)+1)/100);
->>>>>>> origin/master
     protected Random attackRating = rand.nextInt(100)+1;
     protected int bullets;
     protected int vests;
