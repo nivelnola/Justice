@@ -12,13 +12,16 @@ public class Character {
     protected int vests;
     protected String type;
     protected boolean immune;
+    protected int id;
 
     //Constructors
-    public Character() {
+    public Character(int num) {
 	name = "John Johnson";
+	id = num
     }
-    public Character(String n) {
+    public Character(int num, String n) {
 	name = n;
+	id = num
     }
 
     //Methods
