@@ -35,7 +35,7 @@ public class Executioner extends Character {
     public void attack(Character c) {
 	super.attack(c);
 	if (c.type.equals(target)) {
-	    System.out.println("You win."); //will change later
+	    System.out.println("You eliminated a" + c.type + "! Congratulations on completing your task and winning the game.");
 	}
 	else {
 	    System.out.println("You killed a " + c.type + ". Continue on your mission to find and kill a " + target + ".");
