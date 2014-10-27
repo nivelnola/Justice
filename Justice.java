@@ -9,7 +9,10 @@ public class Justice {
     
     //Methods
     public void generate() {
-	
+	for(int counter = 1; counter <= 9; counter++) {
+	    Random nJob = new Random();
+	    if(nJob.randomInt(8) = 0) {
+		
     }
     public static void main(String[] args) {
 	Scanner s = new Scanner(System.in);
