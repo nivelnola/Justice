@@ -6,3 +6,7 @@ Let's divide up the work, so that there aren't any overlaps and therefore errors
    Ok. 
 Cindy was going to finish up the Executioner, but I don't know what she wants.
 What do we still need
+
+Well, the main Justice file still needs to be made to actually run the game
+I think that in terms of characters, I think we have enough for now (assuming they all work).
+Even if they don't work, we've got more than two that do, and we are using the assumption that enemies are basically playable characters that aren't being controlled by the player.
