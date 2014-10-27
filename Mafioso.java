@@ -24,12 +24,14 @@ public class Mafioso{
     return s
     }
     
-  public void checkFaction( Character c){ //mafia should be able to know who each other are
+  public void checkFaction( Character c){ 
+    //mafia should be able to know who each other are
     String s;
     if (c.type.equals("Mafia")){
       s = "Mafia";
       }
-    elseif (c.type //add case for neutral characters
+    else if (c.type.equals("Neutral") { 
+      s = "Neutral";
     else{
       s = "Town";
     }
