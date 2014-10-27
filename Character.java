@@ -6,8 +6,8 @@ public class Character {
     protected int hp;
     protected int strength;
     protected int defense;
-    //protected Random attackRating; // = (rand.nextInt(100)+1)/100);
-    protected int attackRating;
+    protected Random r;
+    protected int attackRating = r.nextInt(100) + 1;
     protected int bullets;
     protected int vests;
     protected String type;
@@ -43,8 +43,6 @@ public class Character {
 
     public void attack(Character c) {
 	int damage;
-	Random r = new Random();
-	attackRating = r.nextInt(100) + 1;
 	damage = (strength * attackRating) - c.defense;
 	if(damage < 0) {
 	    damage = 0;
