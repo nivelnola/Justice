@@ -3,9 +3,9 @@ import java.util.*;
 
 public class Justice {
     ///Instance Variables
-    private int members;
-    private boolean lose;
-    private boolean win;
+    private static int members;
+    private static boolean lose;
+    private static boolean win;
     
     //Methods
     public static void generate() {
@@ -24,26 +24,35 @@ public class Justice {
 	String job;
 	String nam;
 	System.out.println("Welcome to Salem! You are a newcomer to the this town.");
-	System.out.println("What is your job? You can be a Mafioso, a Detective, a Vigilante, an Executioner, or a Survivor.\n");
+	System.out.println("What is your job? You can be a Mafioso, a Detective, a Vigilante, an Executioner, or a Survivor.");
 	job = s.nextLine();
 	System.out.println("What is your name?");
-	nam = s.nextLine();	
+	nam = s.nextLine();
+	Character you;
 	if(job.equals("Vigilante")) {
-	    Vigilante you = new Vigilante(0, nam);
+	    you = new Vigilante(0, nam);
 	}
 	if (job.equals("Executioner")) {
-	    Executioner you = new Executioner(0, nam);
+	    you = new Executioner(0, nam);
 	}
-	if (job.equals("Mafioso")) {
-	    Mafioso you = new Mafioso(0, nam);
+	else if (job.equals("Mafioso")) {
+	    you = new Mafioso(0, nam);
 	}
-	if (job.equals("Detective")) {
-	    Detective you = new Detective(0, nam);
+	else if (job.equals("Detective")) {
+	    you = new Detective(0, nam);
+	}
+	else if (job.equals("Survivor")) {
+	    you = new Survivor(0, nam);
 	}
 	else {
 	    System.out.println("That is not an acceptable job. We are assuming you are a Survivor.");
-	    Survivor you = new Survivor(0, nam);
+	    you = new Survivor(0, nam);
 	}
+	System.out.println("Your stats:\n");
+	System.out.println(you);
 	generate();
+	members = 9;
+	while(you.hp > 0 && (win == false || lose == false)) {
+	}
     }
 }
