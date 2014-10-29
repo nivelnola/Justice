@@ -56,11 +56,7 @@ public class Justice {
 	members = 9;
 	Scanner play = new Scanner(System.in);
 	while(you.hp > 0 && (win == false || lose == false)) {
-	    System.out.println("Who do you want to visit? [1-9]");
-	    int goto;
-	    goto = play.nextInt();
-	    you.visit
-	    System.out.println("You are visiting " + 
+	    System.out.println(you);
 	}
     }
 }
