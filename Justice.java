@@ -56,7 +56,44 @@ public class Justice {
 	members = 9;
 	Scanner play = new Scanner(System.in);
 	while(you.hp > 0 && (win == false || lose == false)) {
-	    System.out.println(you);
+	    you.visitng = true;
+	    while(you.visiting = true) {
+		System.out.println("Who do you want to visit? [1-9]");
+		int tochar = play.nextInt();
+		if(you.visit(tochar, consig) == true) {
+		    you.host = consig;
+		}
+		else if(you.visit(tochar, det)) {
+		    you.host = det;
+		}
+		else if(you.visit(tochar, doc)) {
+		    you.host = doc;
+		}
+		else if(you.visit(tochar, exec)) {
+		    you.host = exec;
+		}
+		else if(you.visit(tochar, gf)) {
+		    you.host = gf;
+		}
+		else if(you.visit(tochar, maf)) {
+		    you.host = maf;
+		}
+		else if(you.visit(tochar, shp)) {
+		    you.host = shp;
+		}
+		else if(you.visit(tochar, surv)) {
+		    you.host = surv;
+		}
+		else if(this.visit(tochar, vig)) {
+		    you.host = vig;
+		}
+		else {
+		    System.out.println("That citizen is nonexistent. Please choose another.");
+		    tochar = play.nextInt();
+		}
+		System.out.println("You are visiting " + you.host.name);
+		visiting = false;
+	    }
 	}
     }
 }

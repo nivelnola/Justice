@@ -14,6 +14,7 @@ public class Character {
     protected boolean immune;
     protected int id;
     protected Character host;
+    protected boolean visiting;
 
     //Constructors
     public Character(int num) {
@@ -71,45 +72,5 @@ public class Character {
     }
     public boolean visit(int ID, Character c) {
 	return (c.id == ID);
-    }
-    public void go() {
-	System.out.println("Who do you want to visit? [1-9]");
-	int goto;
-	goto = play.nextInt();
-	while(visit = true) {
-	    if(this.visit(goto, consig) == true) {
-		this.host = consig;
-	    }
-	    else if(this.visit(goto, det)) {
-		this.host = det;
-	    }
-	    else if(this.visit(goto, doc)) {
-		this.host = doc;
-	    }
-	    else if(this.visit(goto, exec)) {
-		this.host = exec;
-	    }
-	    else if(this.visit(goto, gf)) {
-		this.host = gf;
-	    }
-	    else if(this.visit(goto, maf)) {
-		this.host = maf;
-	    }
-	    else if(this.visit(goto, shp)) {
-		this.host = shp;
-	    }
-	    else if(this.visit(goto, surv)) {
-		this.host = surv;
-	    }
-	    else if(this.visit(goto, vig)) {
-		this.host = vig;
-	    }
-	    else {
-		System.out.println("That citizen is nonexistent. Please choose another.");
-		goto = play.nextInt();
-	    }
-	    System.out.println("You are visiting " + you.host.name);
-	    visit = false;
-	}
     }
 }
