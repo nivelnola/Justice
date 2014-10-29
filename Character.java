@@ -68,4 +68,7 @@ public class Character {
 	    System.out.println("You have fired a bullet at " + c.name);
 	}
     }
+    public boolean visit(int ID, Character c) {
+	return (c.id == ID);
+    }
 }
