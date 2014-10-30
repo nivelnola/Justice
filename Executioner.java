@@ -43,8 +43,5 @@ public class Executioner extends Character {
 	if (c.type.equals(target)) {
 	    System.out.println("You eliminated a" + c.type + "! Congratulations on completing your task and winning the game.");
 	}
-	else {
-	    System.out.println("You killed a " + c.type + ". Continue on your mission to find and kill a " + target + ".");
-	}
     }
 }

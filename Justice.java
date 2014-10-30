@@ -27,7 +27,7 @@ public class Justice {
 	else if(job.equals("Executioner")) {
 	    you = new Executioner(0, nam);
 	    you.setTarget();
-	    System.out.println("You are an Executioner. You must hunt down the Survivor, if it's the last thing you do.");
+	    System.out.println("You are an Executioner. You must hunt down the" + you.target + ", even if it's the last thing you do.");
 	}
 	else if (job.equals("Mafioso")) {
 	    you = new Mafioso(0, nam);
@@ -170,7 +170,7 @@ public class Justice {
 		    Scanner action = new Scanner(System.in);
 		    //Vigilante
 		    if (you.charac == "Vigilante") {
-			System.out.println("Would you like to ATTACK, FIRE, check your STATS, or PUT on a vest?)"); 
+			System.out.println("Would you like to ATTACK, FIRE, check your STATS, or PUT on a vest?"); 
 			String option = action.nextLine();
 			if (option.equalsIgnoreCase("attack")) {
 			    you.attack(you.host);
@@ -181,10 +181,6 @@ public class Justice {
 				System.out.println("You have attacked " + you.host.name + ". Unfortunately, it has attacked back! Your stats are now:");
 				you.host.attack(you);
 				System.out.println(you);
-				System.out.println(you.host);
-			    }
-			    if(you.host.hp < 0) {
-				you.host.dead = true;
 			    }
 			}
 			else if (option.equalsIgnoreCase("fire")) {
@@ -204,7 +200,7 @@ public class Justice {
 				you.vests--;
 			    }
 			    else {
-				System.out.println("You have no vests to put on. In the time that you took to look for a vest, " + you.host.name + "has attacked you. Your stats are now:");
+				System.out.println("You have no vests to put on. In the time that you took to look for a vest, " + you.host.name + " has attacked you. Your stats are now:");
 				you.host.attack(you);
 				System.out.println(you);
 			    }
@@ -247,25 +243,31 @@ public class Justice {
 			    option = action.nextLine();
 			}
 			if(you.guilt) {
-			    you.hp = 0;
+			    lose = true;
+			}
+			if(you.hp <= 0) {
+			    lose = true;
 			}
 		    }
 		    //Detective
 		    if (you.charac == "Detective") {
-			System.out.println("Would you like to ATTACK, FIRE, PUT on a vest, or ASK for his type?)"); 
+			System.out.println("Would you like to ATTACK, FIRE, PUT on a vest, check your STATS, or ASK for his type?"); 
 			String option = action.nextLine();
-			if (option.equalsIgnoreCase("attack")) {
+		        if (option.equalsIgnoreCase("attack")) {
 			    you.attack(you.host);
-			    System.out.println("You have attacked " + you.host.name + ". Unfortunately, it has attacked back! Your stats are now:");
-			    you.host.attack(you);
-			    System.out.println(you);
-			}
-			if (option.equalsIgnoreCase("fire")) {
-			    if (you.bullets > 0) {
-				System.out.println("You have successfuly fired at " + you.host.name + ". Unfortunately, it has attacked you! Your stats are now:");
-				you.fire(you.host);
+			    if(you.host.type.equals(you.type)) {
+				System.out.println("You surprised " + you.host.name + " by attacking him! Why would you do such a thing?");
+			    }
+			    else {
+				System.out.println("You have attacked " + you.host.name + ". Unfortunately, it has attacked back! Your stats are now:");
 				you.host.attack(you);
 				System.out.println(you);
+			    }
+			}
+			else if (option.equalsIgnoreCase("fire")) {
+			    if (you.bullets > 0) {
+				System.out.println("You have successfuly fired at " + you.host.name + ". He had no time to react as your bullet left the gun.");
+				you.fire(you.host);
 			    }
 			    else {
 				System.out.println("You have no bullets! While you were struggling to find something to fire with, " + you.host.name + "has attacked you! Your stats are now:");
@@ -273,26 +275,67 @@ public class Justice {
 				System.out.println(you);
 			    }
 			}
-			if (option.equalsIgnoreCase("put")) {
+			else if (option.equalsIgnoreCase("put")) {
 			    if (you.vests > 0) {
-				System.out.println("You have put on a vest! You are protected from further attacks from " + you.host.name + ".");
+				System.out.println("You have put on a vest! You are protected from being attacked by " + you.host.name + ".");
+				you.vests--;
 			    }
 			    else {
-				System.out.println("You have no vests to put on. In the time that you took to look for a vest, " + you.host.name + "has attacked you. Your stats are now:");
+				System.out.println("You have no vests to put on. In the time that you took to look for a vest, " + you.host.name + " has attacked you. Your stats are now:");
 				you.host.attack(you);
 				System.out.println(you);
 			    }
 			}
-			if (option.equalsIgnoreCase("ask")) {
-			    if (you.host.type.equals("Mafia")) {
-				System.out.println(you.host.name + " is a mafia.");
+			else if (option.equalsIgnoreCase("stats")) {
+			    if(you.host.charac.equals("Doctor")) {
+				System.out.println("The good doctor offers to heal you. Your stats are now:");
+				you.hp += 20;
+				System.out.println(you);
 			    }
-			    else if (you.host.type.equals("Town")) {
-				System.out.println(you.host.name + " is a townsperson.");
+			    else if(you.host.charac.equals("Shopkeeper")) {
+				System.out.println("You are suddenly given a handful of different merchandise. Which would you like to purchase, a BULLET or a VEST?");
+				String choice = action.nextLine();
+				if(choice.equalsIgnoreCase("bullet")) {
+				    you.bullets++;
+				    System.out.println("You have bought a bullet!");
+				}
+				else if(choice.equalsIgnoreCase("vest")) {
+				    you.vests++;
+				    System.out.println("You have bought a vest!");
+				}
+				else {
+				    System.out.println("What was that again?");
+				    choice = action.nextLine();
+				}
+			    }
+			    else if(you.host.type.equals(you.type)) {
+				System.out.println("Your host allows you to rest for a while. Your stats are now:");
+				you.hp += 5;
+				System.out.println(you);
 			    }
 			    else {
-				System.out.println(you.host.name + " is neutral.");
+				System.out.println("You were ambushed when you least expected it! Your stats are now:");
+				you.host.attack(you);
+				System.out.println(you);
 			    }
+			}
+			else {
+			    System.out.println("You seem to be unable to make up your mind, but time is ticking! What do you wish to do?");
+			    option = action.nextLine();
+			}
+			if (option.equalsIgnoreCase("ask")) {
+			    if (you.host.type.equals("Mafia")) {
+				System.out.println(you.host.name + " is a member of the Mafia.");
+			    }
+			    else if (you.host.type.equals("Town")) {
+				System.out.println(you.host.name + " is a Townie.");
+			    }
+			    else {
+				System.out.println(you.host.name + " is Neutral.");
+			    }
+			}			
+			if(you.hp <= 0) {
+			    lose = true;
 			}
 		    }
 		    //Mafioso

@@ -18,7 +18,6 @@ public class Character {
     protected Character host;
     protected boolean visiting;
     protected boolean guilt;
-    protected boolean dead;
 
     //Constructors
     public Character(int num) {
@@ -65,7 +64,6 @@ public class Character {
 	if(bullets > 0) {
 	    bullets--;
 	    c.hp = 0;
-	    c.dead = true;
 	}
     }
     public boolean visit(int ID, Character c) {
