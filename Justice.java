@@ -10,17 +10,6 @@ public class Justice {
     private static boolean win;
     
     //Methods
-    public static void generate() {
-	Consigliere consig = new Consigliere(1, "Tom Hagen");
-	Detective det = new Detective(2, "Hercule Poirot");
-	Doctor doc = new Doctor(3, "Yuri Zhivago");
-	Executioner exec = new Executioner(4, "Sanjuro Kuwabatake");
-	Godfather gf = new Godfather(5, "Louis Buchalter");
-	Mafioso maf = new Mafioso(6, "John Franzese");
-	Shopkeeper shp = new Shopkeeper(7, "William Loman");
-	Survivor surv = new Survivor(8, "Robinson Crusoe");
-	Vigilante vig = new Vigilante(9, "Robyn Hode");
-    }
     public static void main(String[] args) {
 	Scanner s = new Scanner(System.in);
 	String job;
@@ -34,7 +23,7 @@ public class Justice {
 	if(job.equals("Vigilante")) {
 	    you = new Vigilante(0, nam);
 	}
-	if (job.equals("Executioner")) {
+	else if(job.equals("Executioner")) {
 	    you = new Executioner(0, nam);
 	}
 	else if (job.equals("Mafioso")) {
@@ -52,11 +41,19 @@ public class Justice {
 	}
 	System.out.println("Your stats:\n");
 	System.out.println(you);
-	generate();
+	Consigliere consig = new Consigliere(1, "Tom Hagen");
+	Detective det = new Detective(2, "Hercule Poirot");
+	Doctor doc = new Doctor(3, "Yuri Zhivago");
+	Executioner exec = new Executioner(4, "Sanjuro Kuwabatake");
+	Godfather gf = new Godfather(5, "Louis Buchalter");
+	Mafioso maf = new Mafioso(6, "John Franzese");
+	Shopkeeper shp = new Shopkeeper(7, "William Loman");
+	Survivor surv = new Survivor(8, "Robinson Crusoe");
+	Vigilante vig = new Vigilante(9, "Robyn Hode");
 	members = 9;
 	Scanner play = new Scanner(System.in);
 	while(you.hp > 0 && (win == false || lose == false)) {
-	    you.visitng = true;
+	    you.visiting = true;
 	    while(you.visiting = true) {
 		System.out.println("Who do you want to visit? [1-9]");
 		int tochar = play.nextInt();
@@ -84,7 +81,7 @@ public class Justice {
 		else if(you.visit(tochar, surv)) {
 		    you.host = surv;
 		}
-		else if(this.visit(tochar, vig)) {
+		else if(you.visit(tochar, vig)) {
 		    you.host = vig;
 		}
 		else {
@@ -92,7 +89,7 @@ public class Justice {
 		    tochar = play.nextInt();
 		}
 		System.out.println("You are visiting " + you.host.name);
-		visiting = false;
+		you.visiting = false;
 	    }
 	}
     }
