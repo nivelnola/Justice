@@ -5,8 +5,9 @@ public class Detective extends Character {
     super(num);
     name = "Sherlock Homes";
     hp = 125;
-    strength = 3;
-    defense = 2;
+    strength = 15;
+    defense = 6;
+    attackRating = 45;
     charac = "Detective";
     type = "Town";
     id = num;
@@ -15,8 +16,9 @@ public class Detective extends Character {
     super(num, n);
     name = n;
     hp = 125;
-    strength = 3;
-    defense = 2;
+    strength = 15;
+    defense = 6;
+    attackRating = 45;
     charac = "Detective";
     type = "Town";
     id = num;
