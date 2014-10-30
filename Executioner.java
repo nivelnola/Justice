@@ -38,10 +38,13 @@ public class Executioner extends Character {
 	target = targets[i];
     }
     
-    public void attack(Character c) {
-	super.attack(c);
-	if (c.type.equals(target)) {
-	    System.out.println("You eliminated a" + c.type + "! Congratulations on completing your task and winning the game.");
+    public void fire(Character c) {
+	super.fire(c);
+	if (c.charac == target) {
+	    System.out.println("You eliminated a " + c.charac + "! Congratulations on completing your task and winning the game.");
 	}
-    }
+	else {
+	    System.out.println("You killed a " + c.charac + ". Continue on your mission to find and kill a " + target + ".");
+	    
+	}
 }

@@ -160,10 +160,7 @@ public class Justice {
 			}
 		    }
 		}
-		if(lose) {
-		    System.out.println("### GAME OVER ###");
-			}
-		else {
+		if(!lose && !win) {
 		    System.out.println("You are visiting " + you.host.name);
 		    you.visiting = false;
 		    //Actions
@@ -247,6 +244,9 @@ public class Justice {
 			}
 			if(you.hp <= 0) {
 			    lose = true;
+			}
+			else if(consig.hp<=0 && gf.hp<=0 && maf.hp<=0) {
+			    win = true;
 			}
 		    }
 		    //Detective
@@ -337,6 +337,9 @@ public class Justice {
 			if(you.hp <= 0) {
 			    lose = true;
 			}
+			else if(consig.hp<=0 && gf.hp<=0 && maf.hp<=0) {
+			    win = true;
+			}
 		    }
 		    //Mafioso
 		    if (you.charac == "Mafioso") {
@@ -414,6 +417,9 @@ public class Justice {
 			}			
 			if(you.hp <= 0) {
 			    lose = true;
+			}
+			else if(vig.hp<=0 && doc.hp<=0 && det.hp<=0) {
+			    win = true;
 			}
 		    }
 		    //Survivor
@@ -502,20 +508,20 @@ public class Justice {
 			if(you.hp <= 0) {
 			    lose = true;
 			}
+			else if(you.type.equals("Mafia") && vig.hp<=0 && doc.hp<=0 && det.hp<=0) {
+			    win = true;
+			}
+			else if(you.type.equals("Town") && consig.hp<=0 && gf.hp<=0 && maf.hp<=0) {
+			    win = true;
+			}
 		    }
 		    //Executioner
 		    if (you.charac == "Executioner") {
-			System.out.println("Would you like to ATTACK, FIRE, or PUT on a vest?)"); 
+			System.out.println("Would you like to FIRE, check your STATS, or PUT on a vest?"); 
 			String option = action.nextLine();
-			if (option.equalsIgnoreCase("attack")) {
-			    you.attack(you.host);
-			    System.out.println("You have attacked " + you.host.name + ". Unfortunately, it has attacked back! Your stats are now:");
-			    you.host.attack(you);
-			    System.out.println(you);
-			}
-			if (option.equalsIgnoreCase("fire")) {
+		        if (option.equalsIgnoreCase("fire")) {
 			    if (you.bullets > 0) {
-				System.out.println("You have successfuly fired at " + you.host.name + ". He had no time to react as the bullet left your gun.");
+				System.out.println("You have successfuly fired at " + you.host.name + ". He had no time to react as your bullet left the gun.");
 				you.fire(you.host);
 			    }
 			    else {
@@ -524,21 +530,69 @@ public class Justice {
 				System.out.println(you);
 			    }
 			}
-			if (option.equalsIgnoreCase("put")) {
+			else if (option.equalsIgnoreCase("put")) {
 			    if (you.vests > 0) {
-				System.out.println("You have put on a vest! You are protected from further attacks from " + you.host.name + ".");
+				System.out.println("You have put on a vest! You are protected from being attacked by " + you.host.name + ".");
+				you.vests--;
 			    }
 			    else {
-				System.out.println("You have no vests to put on. In the time that you took to look for a vest, " + you.host.name + "has attacked you. Your stats are now:");
+				System.out.println("You have no vests to put on. In the time that you took to look for a vest, " + you.host.name + " has attacked you. Your stats are now:");
 				you.host.attack(you);
 				System.out.println(you);
 			    }
+			}
+			else if (option.equalsIgnoreCase("stats")) {
+			    if(you.host.charac.equals("Doctor")) {
+				System.out.println("The good doctor offers to heal you. Your stats are now:");
+				you.hp += 20;
+				System.out.println(you);
+			    }
+			    else if(you.host.charac.equals("Shopkeeper")) {
+				System.out.println("You are suddenly given a handful of different merchandise. Which would you like to purchase, a BULLET or a VEST?");
+				String choice = action.nextLine();
+				if(choice.equalsIgnoreCase("bullet")) {
+				    you.bullets++;
+				    System.out.println("You have bought a bullet!");
+				}
+				else if(choice.equalsIgnoreCase("vest")) {
+				    you.vests++;
+				    System.out.println("You have bought a vest!");
+				}
+				else {
+				    System.out.println("What was that again?");
+				    choice = action.nextLine();
+				}
+			    }
+			    else if(you.host.type.equals(you.type)) {
+				System.out.println("Your host allows you to rest for a while. Your stats are now:");
+				you.hp += 5;
+				System.out.println(you);
+			    }
+			    else {
+				System.out.println("You were ambushed when you least expected it! Your stats are now:");
+				you.host.attack(you);
+				System.out.println(you);
+			    }
+			}
+			else {
+			    System.out.println("You seem to be unable to make up your mind, but time is ticking! What do you wish to do?");
+			    option = action.nextLine();
+			}			
+			if(you.hp <= 0) {
+			    lose = true;
+			}
+			else if(you.target.hp <= 0) {
+			    win = true;
 			}
 		    }
 		    you.visiting = true;
 		}
 	    }
-	    System.out.println("### GAME OVER ###");
+	    if(lose) {
+		System.out.println("### GAME OVER ###");
+	    }
+	    if(win) {
+		System.out.println("### YOU HAVE WON ###");
+	    }
 	}
     }
-}
