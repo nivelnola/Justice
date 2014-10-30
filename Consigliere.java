@@ -9,7 +9,7 @@ public class Consigliere extends Character {
 	strength = 7;
 	defense = 5;
 	attackRating = 4;
-	charac = "Consigliere"
+	charac = "Consigliere";
 	type = "Mafia";
 	log = "LIST OF ROLES";
 	id = num;
@@ -20,7 +20,7 @@ public class Consigliere extends Character {
 	strength = 7;
 	defense = 5;
 	attackRating = 4;
-	charac = "Consigliere"
+	charac = "Consigliere";
 	type = "Mafia";
 	log = "LIST OF ROLES";
 	id = num;
