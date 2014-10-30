@@ -10,6 +10,7 @@ public class Justice {
     
     //Methods
     public static void main(String[] args) {
+	//Creating a character
 	Scanner s = new Scanner(System.in);
 	String job;
 	String nam;
@@ -21,19 +22,24 @@ public class Justice {
 	Character you;
 	if(job.equals("Vigilante")) {
 	    you = new Vigilante(0, nam);
+	    System.out.println("You work for the Town. You must kill all Mafia, but beware of killing your brethren!");
 	}
 	else if(job.equals("Executioner")) {
 	    you = new Executioner(0, nam);
 	    you.setTarget();
+	    System.out.println("You are an Executioner. You must hunt down the Survivor, if it's the last thing you do.");
 	}
 	else if (job.equals("Mafioso")) {
 	    you = new Mafioso(0, nam);
+	    System.out.println("You work for the Mafia. You must kill all Townies that oppose your order.");
 	}
 	else if (job.equals("Detective")) {
 	    you = new Detective(0, nam);
+	    System.out.println("You work for the Town. You must rid your home of your enemies, the Mafia.");
 	}
 	else if (job.equals("Survivor")) {
 	    you = new Survivor(0, nam);
+	    System.out.println("You are a Survivor. You must choose your peers and live to see another day.");
 	}
 	else {
 	    System.out.println("That is not an acceptable job. We are assuming you are a Survivor.");
