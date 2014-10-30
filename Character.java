@@ -11,6 +11,7 @@ public class Character {
     protected int bullets;
     protected int vests;
     protected String type;
+    protected String target;
     protected String charac;
     protected boolean immune;
     protected int id;
