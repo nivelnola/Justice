@@ -8,7 +8,6 @@ public class Godfather extends Character{
 	attackRating = 6;
 	bullets = 5;
 	type = "Mafia";
-	charac = "Godfather";
 	id = num;
 	    }
 
@@ -21,7 +20,6 @@ public class Godfather extends Character{
 	attackRating = 6;
 	bullets = 5;
 	type = "Mafia";
-	charac = "Godfather";
 	id = num;
 	    }
  
