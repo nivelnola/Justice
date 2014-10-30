@@ -41,6 +41,7 @@ public class Justice {
 	}
 	System.out.println("Your stats:\n");
 	System.out.println(you);
+	//Generate
 	Consigliere consig = new Consigliere(1, "Tom Hagen");
 	Detective det = new Detective(2, "Hercule Poirot");
 	Doctor doc = new Doctor(3, "Yuri Zhivago");
@@ -51,37 +52,39 @@ public class Justice {
 	Survivor surv = new Survivor(8, "Robinson Crusoe");
 	Vigilante vig = new Vigilante(9, "Robyn Hode");
 	members = 9;
+	//Play
 	Scanner play = new Scanner(System.in);
 	while(you.hp > 0 && (win == false || lose == false)) {
+	    //Visiting
 	    you.visiting = true;
 	    while(you.visiting = true) {
 		System.out.println("Who do you want to visit? [1-9]");
 		int tochar = play.nextInt();
-		if(you.visit(tochar, consig) == true) {
+		if(you.visit(tochar, consig) && (consig.hp > 0)) {
 		    you.host = consig;
 		}
-		else if(you.visit(tochar, det)) {
+		else if(you.visit(tochar, det) && (det.hp > 0)) {
 		    you.host = det;
 		}
-		else if(you.visit(tochar, doc)) {
+		else if(you.visit(tochar, doc) && (doc.hp > 0)) {
 		    you.host = doc;
 		}
-		else if(you.visit(tochar, exec)) {
+		else if(you.visit(tochar, exec) && (exec.hp > 0)) {
 		    you.host = exec;
 		}
-		else if(you.visit(tochar, gf)) {
+		else if(you.visit(tochar, gf) && (gf.hp > 0)) {
 		    you.host = gf;
 		}
-		else if(you.visit(tochar, maf)) {
+		else if(you.visit(tochar, maf) && (maf.hp > 0)) {
 		    you.host = maf;
 		}
-		else if(you.visit(tochar, shp)) {
+		else if(you.visit(tochar, shp) && (shp.hp > 0)) {
 		    you.host = shp;
 		}
-		else if(you.visit(tochar, surv)) {
+		else if(you.visit(tochar, surv) && (surv.hp > 0)) {
 		    you.host = surv;
 		}
-		else if(you.visit(tochar, vig)) {
+		else if(you.visit(tochar, vig) && (vig.hp > 0)) {
 		    you.host = vig;
 		}
 		else {
@@ -90,10 +93,10 @@ public class Justice {
 		}
 		System.out.println("You are visiting " + you.host.name);
 		you.visiting = false;
-
+		//Actions
 		Scanner action = new Scanner(System.in);
 		if (you.charac == "Vigilante") {
-		    System.out.println("Would you like to ATTACK, FIRE, or PUT on a vest?)"); 
+		    System.out.println("Would you like to ATTACK, FIRE, check your STATS, or PUT on a vest?)"); 
 		    String option = action.nextLine();
 		    if (option.equalsIgnoreCase("attack")) {
 			you.attack(you.host);
@@ -108,10 +111,8 @@ public class Justice {
 		    }
 		    if (option.equalsIgnoreCase("fire")) {
 			if (you.bullets > 0) {
-			    System.out.println("You have successfuly fired at " + you.host.name + ". Unfortunately, it has attacked you! Your stats are now:");
+			    System.out.println("You have successfuly fired at " + you.host.name + ". He had no time to react as the bullet left your gun.");
 			    you.fire(you.host);
-			    you.host.attack(you);
-			    System.out.println(you);
 			}
 			else {
 			    System.out.println("You have no bullets! While you were struggling to find something to fire with, " + you.host.name + "has attacked you! Your stats are now:");
@@ -129,7 +130,18 @@ public class Justice {
 			    System.out.println(you);
 			}
 		    }
-		    
+		    if (option.equalsIgnoreCase("stats")) {
+			if(you.host.type.equals(you.type)) {
+			    System.out.println("Your host allows you to rest for a while. Your stats are now:");
+			    you.hp += 5;
+			    System.out.println(you);
+			}
+			else {
+			    System.out.println("You were ambushed when you least expected it! Your stats are now:");
+			    you.host.attack(you);
+			    System.out.println(you);
+			}
+		    }
 		}
 	    }
 	}
