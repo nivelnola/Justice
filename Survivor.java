@@ -7,6 +7,7 @@ public class Survivor extends Character {
   public Survivor(int num) {
     super(num);
     name = "Robinson Crusoe";
+    charac = "Survivor";
     hp = 50;
     type = "Neutral";
     defense = 9;
@@ -17,6 +18,7 @@ public class Survivor extends Character {
     super(num, n);
     name = n;
     hp = 50;
+    charac = "Survivor";
     type = "Neutral";
     defense = 9;
     id = num;
