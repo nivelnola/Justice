@@ -93,13 +93,18 @@ public class Justice {
 
 		Scanner action = new Scanner(System.in);
 		if (you.charac == "Vigilante") {
-		    System.out.println("Would you like to ATTACK, FIRE, or PUT ON A VEST?)"); 
+		    System.out.println("Would you like to ATTACK, FIRE, or PUT on a vest?)"); 
 		    String option = action.nextLine();
 		    if (option.equalsIgnoreCase("attack")) {
 			you.attack(you.host);
-			System.out.println("You have attacked " + you.host.name + ". Unfortunately, it has attacked back! Your stats are now:");
-			you.host.attack(you);
-			System.out.println(you);
+			if(!you.host.type.equals(you.type)) {
+			    System.out.println("You have attacked " + you.host.name + ". Unfortunately, he has attacked back! Your stats are now:");
+			    you.host.attack(you);
+			    System.out.println(you);
+			}
+			else {
+			    System.out.println("You surprised " + you.host.name + " by attacking them! Now, why would you do that?");
+			}
 		    }
 		    if (option.equalsIgnoreCase("fire")) {
 			if (you.bullets > 0) {
@@ -114,7 +119,7 @@ public class Justice {
 			    System.out.println(you);
 			}
 		    }
-		    if (option.equalsIgnoreCase("put on a vest")) {
+		    if (option.equalsIgnoreCase("put")) {
 			if (you.vests > 0) {
 			    System.out.println("You have put on a vest! You are protected from further attacks from " + you.host.name + ".");
 			}
