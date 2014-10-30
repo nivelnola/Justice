@@ -30,6 +30,12 @@ public class Survivor extends Character {
     String t;
     System.out.println("Who will you side with? Enter: Mafia/Town");
     t = s.nextLine();
-    this.type = t;
+    if (!t.equalsIgnoreCase("mafia") || !t.equalsIgnoreCase("town")) {
+      System.out.println("Invalid choice: choose either Mafia or Town");
+      t = s.nextLine();
+    }
+    else {
+      this.type = t;
+    }
   }
 }
