@@ -3,6 +3,7 @@ public class Mafioso extends Character {
   public Mafioso(int num){
     super(num);
     type ="Mafia";
+    charac = "Mafioso"
     hp = 75;
     strength = 6;
     defense = 4;
@@ -15,6 +16,7 @@ public class Mafioso extends Character {
     super(num, n);
     name = n;
     type = "Mafia";
+    charac = "Mafioso"
     hp = 75;
     strength = 6;
     defense = 4;
