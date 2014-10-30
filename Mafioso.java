@@ -5,9 +5,9 @@ public class Mafioso extends Character {
     type ="Mafia";
     charac = "Mafioso";
     hp = 75;
-    strength = 6;
-    defense = 4;
-    attackRating = 6;
+    strength = 30;
+    defense = 7;
+    attackRating = 40;
     bullets = 3;
     id = num;
     }
@@ -18,9 +18,9 @@ public class Mafioso extends Character {
     type = "Mafia";
     charac = "Mafioso";
     hp = 75;
-    strength = 6;
-    defense = 4;
-    attackRating = 6;
+    strength = 30;
+    defense = 7;
+    attackRating = 40;
     bullets = 3;
     id = num;
     }
