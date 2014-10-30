@@ -74,4 +74,4 @@ public class Character {
     public boolean visit(int ID, Character c) {
 	return (c.id == ID); 
     }
-}
+} 
