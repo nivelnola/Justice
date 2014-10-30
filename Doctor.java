@@ -8,7 +8,7 @@ public class Doctor extends Character {
         type = "Town";
         hp = 100;
         strength = 0;
-        defense = 3;
+        defense = 10;
         attackRating = 0;
         xp = 0;
 	id = num;
@@ -18,7 +18,7 @@ public class Doctor extends Character {
         type = "Town";
         hp = 100;
         strength = 0;
-        defense= 3;
+        defense= 10;
         attackRating = 0;
         xp = 0;
 	id = num;
