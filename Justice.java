@@ -15,7 +15,7 @@ public class Justice {
 	String job;
 	String nam;
 	System.out.println("Welcome to Salem! You are a newcomer to the this town.");
-	System.out.println("What is your job? You can be a Mafioso, a Detective, a Vigilante, an Executioner, or a Survivor.");
+	System.out.println("What is your job? You can be a Mafioso, a Detective, a Vigilante, or a Survivor.");
 	job = s.nextLine();
 	System.out.println("What is your name?");
 	nam = s.nextLine();
@@ -23,11 +23,6 @@ public class Justice {
 	if(job.equals("Vigilante")) {
 	    you = new Vigilante(0, nam);
 	    System.out.println("You work for the Town. You must kill all Mafia, but beware of killing your brethren!");
-	}
-	else if(job.equals("Executioner")) {
-	    you = new Executioner(0, nam);
-	    you.setTarget();
-	    System.out.println("You are an Executioner. You must hunt down the" + you.target + ", even if it's the last thing you do.");
 	}
 	else if (job.equals("Mafioso")) {
 	    you = new Mafioso(0, nam);
@@ -515,76 +510,6 @@ public class Justice {
 			    win = true;
 			}
 		    }
-		    //Executioner
-		    if (you.charac == "Executioner") {
-			System.out.println("Would you like to FIRE, check your STATS, or PUT on a vest?"); 
-			String option = action.nextLine();
-		        if (option.equalsIgnoreCase("fire")) {
-			    if (you.bullets > 0) {
-				System.out.println("You have successfuly fired at " + you.host.name + ". He had no time to react as your bullet left the gun.");
-				you.fire(you.host);
-			    }
-			    else {
-				System.out.println("You have no bullets! While you were struggling to find something to fire with, " + you.host.name + "has attacked you! Your stats are now:");
-				you.host.attack(you);
-				System.out.println(you);
-			    }
-			}
-			else if (option.equalsIgnoreCase("put")) {
-			    if (you.vests > 0) {
-				System.out.println("You have put on a vest! You are protected from being attacked by " + you.host.name + ".");
-				you.vests--;
-			    }
-			    else {
-				System.out.println("You have no vests to put on. In the time that you took to look for a vest, " + you.host.name + " has attacked you. Your stats are now:");
-				you.host.attack(you);
-				System.out.println(you);
-			    }
-			}
-			else if (option.equalsIgnoreCase("stats")) {
-			    if(you.host.charac.equals("Doctor")) {
-				System.out.println("The good doctor offers to heal you. Your stats are now:");
-				you.hp += 20;
-				System.out.println(you);
-			    }
-			    else if(you.host.charac.equals("Shopkeeper")) {
-				System.out.println("You are suddenly given a handful of different merchandise. Which would you like to purchase, a BULLET or a VEST?");
-				String choice = action.nextLine();
-				if(choice.equalsIgnoreCase("bullet")) {
-				    you.bullets++;
-				    System.out.println("You have bought a bullet!");
-				}
-				else if(choice.equalsIgnoreCase("vest")) {
-				    you.vests++;
-				    System.out.println("You have bought a vest!");
-				}
-				else {
-				    System.out.println("What was that again?");
-				    choice = action.nextLine();
-				}
-			    }
-			    else if(you.host.type.equals(you.type)) {
-				System.out.println("Your host allows you to rest for a while. Your stats are now:");
-				you.hp += 5;
-				System.out.println(you);
-			    }
-			    else {
-				System.out.println("You were ambushed when you least expected it! Your stats are now:");
-				you.host.attack(you);
-				System.out.println(you);
-			    }
-			}
-			else {
-			    System.out.println("You seem to be unable to make up your mind, but time is ticking! What do you wish to do?");
-			    option = action.nextLine();
-			}			
-			if(you.hp <= 0) {
-			    lose = true;
-			}
-			else if(you.target.hp <= 0) {
-			    win = true;
-			}
-		    }
 		    you.visiting = true;
 		}
 	    }
@@ -596,3 +521,4 @@ public class Justice {
 	    }
 	}
     }
+}

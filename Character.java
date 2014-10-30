@@ -70,10 +70,11 @@ public class Character {
 	return (c.id == ID); 
     }
     
-    public void setTarget() {
+    public String setTarget() {
     	String[] targets = {"Town", "Neutral", "Mafia"};
 	Random r = new Random();
 	int i = r.nextInt(3);
 	target = targets[i];
+	return target;
     }
 } 

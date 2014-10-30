@@ -11,6 +11,7 @@ public class Executioner extends Character {
 	name = "Frankie";
 	charac = "Executioner";
 	type = "Neutral";
+	strength = 30;
 	hp = 75;
 	defense = 7;
 	bullets = 3;
@@ -23,6 +24,7 @@ public class Executioner extends Character {
 	name = n;
 	charac = "Executioner";
 	type = "Neutral";
+	strength = 30;
 	hp = 75;
 	defense = 7;
 	bullets = 3;
@@ -31,11 +33,12 @@ public class Executioner extends Character {
     }
 
     //Methods 
-    public void setTarget() {
+    public String setTarget() {
 	String[] targets = {"Vigilante", "Detective", "Mafioso", "Survivor", "Doctor", "Shopkeeper", "Godfather"};
 	Random r = new Random();
 	int i = r.nextInt(7);
 	target = targets[i];
+	return target;
     }
     
     public void fire(Character c) {
@@ -47,4 +50,5 @@ public class Executioner extends Character {
 	    System.out.println("You killed a " + c.charac + ". Continue on your mission to find and kill a " + target + ".");
 	    
 	}
+}
 }
