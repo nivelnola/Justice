@@ -170,7 +170,7 @@ public class Justice {
 				System.out.println("You surprised " + you.host.name + " by attacking him! Why would you do such a thing?");
 			    }
 			    else {
-				System.out.println("You have attacked " + you.host.name + ". Unfortunately, it has attacked back! Your stats are now:");
+				System.out.println("You have attacked " + you.host.name + ". Unfortunately, he has attacked back! Your stats are now:");
 				you.host.attack(you);
 				System.out.println(you);
 			    }
@@ -254,7 +254,7 @@ public class Justice {
 				System.out.println("You surprised " + you.host.name + " by attacking him! Why would you do such a thing?");
 			    }
 			    else {
-				System.out.println("You have attacked " + you.host.name + ". Unfortunately, it has attacked back! Your stats are now:");
+				System.out.println("You have attacked " + you.host.name + ". Unfortunately, he has attacked back! Your stats are now:");
 				you.host.attack(you);
 				System.out.println(you);
 			    }
@@ -346,7 +346,7 @@ public class Justice {
 				System.out.println("You surprised " + you.host.name + " by attacking him! Why would you do such a thing?");
 			    }
 			    else {
-				System.out.println("You have attacked " + you.host.name + ". Unfortunately, it has attacked back! Your stats are now:");
+				System.out.println("You have attacked " + you.host.name + ". Unfortunately, he has attacked back! Your stats are now:");
 				you.host.attack(you);
 				System.out.println(you);
 			    }
@@ -427,7 +427,7 @@ public class Justice {
 				System.out.println("You surprised " + you.host.name + " by attacking him! Why would you do such a thing?");
 			    }
 			    else {
-				System.out.println("You have attacked " + you.host.name + ". Unfortunately, it has attacked back! Your stats are now:");
+				System.out.println("You have attacked " + you.host.name + ". Unfortunately, he has attacked back! Your stats are now:");
 				you.host.attack(you);
 				System.out.println(you);
 			    }
