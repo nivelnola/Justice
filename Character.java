@@ -17,6 +17,7 @@ public class Character {
     protected int id;
     protected Character host;
     protected boolean visiting;
+    protected String target;
 
     //Constructors
     public Character(int num) {
@@ -69,7 +70,6 @@ public class Character {
 	if(bullets > 0) {
 	    bullets--;
 	    c.hp = 0;
-	    System.out.println("You have fired a bullet at " + c.name);
 	}
     }
     public boolean visit(int ID, Character c) {
