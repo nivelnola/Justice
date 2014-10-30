@@ -6,6 +6,7 @@ public class Shopkeeper extends Character {
 	name = "Oaken";
 	hp = 50;
 	type = "Neutral";
+	charac = "Shopkeeper";
 	defense = 2;
 	vests = 5;
 	bullets = 4;
@@ -17,6 +18,7 @@ public class Shopkeeper extends Character {
 	name = n;
 	hp = 50;
 	type = "Neutral";
+	charac = "Shopkeeper";
 	defense = 2;
 	vests = 5;
 	bullets = 4;

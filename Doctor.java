@@ -6,6 +6,7 @@ public class Doctor extends Character {
     public Doctor(int num) {
 	super(num);
         type = "Town";
+	charac = "Doctor";
         hp = 100;
         strength = 0;
         defense = 10;
@@ -16,6 +17,7 @@ public class Doctor extends Character {
     public Doctor(int num, String n ) {
 	super(num, n);
         type = "Town";
+	charac = "Doctor";
         hp = 100;
         strength = 0;
         defense= 10;
