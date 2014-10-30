@@ -9,9 +9,9 @@ public class Vigilante extends Character {
 	charac = "Vigilante";
 	bullets = 3;
 	hp = 75;
-	strength = 5;
+	strength = 25;
 	defense = 3;
-	attackRating = 6;
+	attackRating = 50;
 	id = num;
     }
     public Vigilante(int num, String n) {
@@ -20,9 +20,9 @@ public class Vigilante extends Character {
 	charac = "Vigilante";
 	bullets = 3;
 	hp = 75;
-	strength = 5;
+	strength = 25;
 	defense = 3;
-	attackRating = 6;
+	attackRating = 50;
 	id = num;
     }
 

@@ -17,7 +17,6 @@ public class Character {
     protected int id;
     protected Character host;
     protected boolean visiting;
-    protected String target;
 
     //Constructors
     public Character(int num) {

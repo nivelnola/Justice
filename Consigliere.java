@@ -6,9 +6,9 @@ public class Consigliere extends Character {
     public Consigliere(int num) {
 	super(num);
 	hp = 80;
-	strength = 7;
+	strength = 20;
 	defense = 5;
-	attackRating = 4;
+	attackRating = 40;
 	charac = "Consigliere";
 	type = "Mafia";
 	log = "LIST OF ROLES";
@@ -17,9 +17,9 @@ public class Consigliere extends Character {
     public Consigliere(int num, String n) {
 	super(num, n);
 	hp = 80;
-	strength = 7;
+	strength = 20;
 	defense = 5;
-	attackRating = 4;
+	attackRating = 40;
 	charac = "Consigliere";
 	type = "Mafia";
 	log = "LIST OF ROLES";
