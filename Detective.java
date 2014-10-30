@@ -7,6 +7,7 @@ public class Detective extends Character {
     hp = 125;
     strength = 3;
     defense = 2;
+    charac = "Detective";
     type = "Town";
     id = num;
   }
@@ -16,6 +17,7 @@ public class Detective extends Character {
     hp = 125;
     strength = 3;
     defense = 2;
+    charac = "Detective";
     type = "Town";
     id = num;
   }
