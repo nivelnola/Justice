@@ -155,7 +155,7 @@ public class Justice {
 		    }
 		}
 		if(lose) {
-		    System.out.println("### GAME OVER ###");
+		    System.out.println("### GAME OVER ###")
 			}
 		else {
 		    System.out.println("You are visiting " + you.host.name);

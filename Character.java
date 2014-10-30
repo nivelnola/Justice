@@ -17,6 +17,8 @@ public class Character {
     protected int id;
     protected Character host;
     protected boolean visiting;
+    protected boolean guilt;
+    protected boolean dead;
 
     //Constructors
     public Character(int num) {
@@ -30,13 +32,7 @@ public class Character {
 
     //Methods
     public boolean isAlive() {
-	if(hp <= 0) {
-	    System.out.println("You are dead.");
-	    return false;
-	}
-	else {
-	    return true;
-	}
+	return(hp>0 && hp!=0);
     }
     public String toString() {
 	String s = new String();
@@ -69,6 +65,7 @@ public class Character {
 	if(bullets > 0) {
 	    bullets--;
 	    c.hp = 0;
+	    c.dead = true;
 	}
     }
     public boolean visit(int ID, Character c) {
