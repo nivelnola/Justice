@@ -76,9 +76,9 @@ public class Character {
     }
     
     public void setTarget() {
-    	String[] targets = {"Vigilante", "Detective", "Mafioso", "Survivor", "Doctor", "Shopkeeper", "Godfather"};
+    	String[] targets = {"Town", "Neutral", "Mafia"};
 	Random r = new Random();
-	int i = r.nextInt(7);
+	int i = r.nextInt(3);
 	target = targets[i];
     }
 } 
