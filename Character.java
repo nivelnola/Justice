@@ -74,4 +74,11 @@ public class Character {
     public boolean visit(int ID, Character c) {
 	return (c.id == ID); 
     }
+    
+    public void setTarget() {
+    	String[] targets = {"Vigilante", "Detective", "Mafioso", "Survivor", "Doctor", "Shopkeeper", "Godfather"};
+	Random r = new Random();
+	int i = r.nextInt(7);
+	target = targets[i];
+    }
 } 
