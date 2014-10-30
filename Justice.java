@@ -90,6 +90,42 @@ public class Justice {
 		}
 		System.out.println("You are visiting " + you.host.name);
 		you.visiting = false;
+
+		Scanner action = new Scanner(System.in);
+		if (you.charac == "Vigilante") {
+		    System.out.println("Would you like to ATTACK, FIRE, or PUT ON A VEST?)"); 
+		    String option = action.nextLine();
+		    if (option.equalsIgnoreCase("attack")) {
+			you.attack(you.host);
+			System.out.println("You have attacked " + you.host.name + ". Unfortunately, it has attacked back! Your stats are now:");
+			you.host.attack(you);
+			System.out.println(you);
+		    }
+		    if (option.equalsIgnoreCase("fire")) {
+			if (you.bullets > 0) {
+			    System.out.println("You have successfuly fired at " + you.host.name + ". Unfortunately, it has attacked you! Your stats are now:");
+			    you.fire(you.host);
+			    you.host.attack(you);
+			    System.out.println(you);
+			}
+			else {
+			    System.out.println("You have no bullets! While you were struggling to find something to fire with, " + you.host.name + "has attacked you! Your stats are now:");
+			    you.host.attack(you);
+			    System.out.println(you);
+			}
+		    }
+		    if (option.equalsIgnoreCase("put on a vest")) {
+			if (you.vests > 0) {
+			    System.out.println("You have put on a vest! You are protected from further attacks from " + you.host.name + ".");
+			}
+			else {
+			    System.out.println("You have no vests to put on. In the time that you took to look for a vest, " + you.host.name + "has attacked you. Your stats are now:");
+			    you.host.attack(you);
+			    System.out.println(you);
+			}
+		    }
+		    
+		}
 	    }
 	}
     }
